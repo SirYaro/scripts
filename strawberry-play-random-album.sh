@@ -5,7 +5,7 @@
 PLAYER='/usr/bin/strawberry'
 PLAYER_CMD='--load'
 PLAYER_PLAY_CMD='--play'
-MUSIC_HOME='/home/yaro/Muzyka'
+MUSIC_HOME='/home/${USER}/Muzyka'
 MUSIC_SUBDIRS="$(echo ./{{A..L},Ł,{M..Z}}/)"    # DIRS TO SCAN LOCATED UNDER THE $MUSIC_HOME, EX: MUSIC_SUBDIRS="./DIR1 ./DIR2 ./DIR3"
 
 function f_add_album()
