@@ -30,7 +30,7 @@ function f_getStatus()
 
 function f_getTitle()
 {
-    qdbus org.mpris.MediaPlayer2.strawberry /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Metadata | grep -e 'xesam:artist' -e 'xesam:title'|awk '{$1=""; print $0}'|sed -e 'N;s/\n/ -/'
+    qdbus org.mpris.MediaPlayer2.strawberry /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Metadata | grep -e 'artist' -e 'title'|awk '{$1=""; print $0}'|sed -e 'N;s/\n/ -/'
 }
 
 f_getStatus
