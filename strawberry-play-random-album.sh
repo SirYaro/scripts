@@ -12,7 +12,7 @@ function f_add_album()
 {
     f_getStatus
     cd "$MUSIC_HOME"
-    ALBUM_PATH=`find ${MUSIC_SUBDIR} -name "*.flac" -o -name "*.mp3" | sed 's/[^/]*$//' | sort | uniq | shuf | head -1`
+    ALBUM_PATH=`find ${MUSIC_SUBDIRS} -name "*.flac" -o -name "*.mp3" | sed 's/[^/]*$//' | sort | uniq | shuf | head -1`
 
     echo -ne "\n${MUSIC_HOME}/${ALBUM_PATH}\n"
     ${PLAYER} ${PLAYER_CMD} "${MUSIC_HOME}/${ALBUM_PATH}"
